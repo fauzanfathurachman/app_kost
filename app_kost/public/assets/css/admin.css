@@ -1,0 +1,7 @@
+.sidebar { min-height: 100vh; width: 220px; position: fixed; }
+.sidebar .nav-link.active, .sidebar .nav-link:hover { background: #0d6efd; color: #fff; }
+.card { border-radius: 1rem; }
+.table th { cursor: pointer; }
+@media (max-width: 768px) {
+  .sidebar { position: static; width: 100%; min-height: auto; }
+} 
