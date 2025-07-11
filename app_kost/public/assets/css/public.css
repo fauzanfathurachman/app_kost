@@ -1,10 +1,37 @@
-body { scroll-behavior: smooth; }
-.hero-img { height: 60vh; object-fit: cover; filter: brightness(0.7); }
-.hero-overlay { background: rgba(0,0,0,0.4); z-index: 2; }
+:root {
+  --primary: #0d6efd;
+  --secondary: #6c757d;
+  --success: #198754;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --info: #0dcaf0;
+  --light: #f8f9fa;
+  --dark: #212529;
+}
+body { color: var(--dark); background: var(--light); font-family: 'Segoe UI', Arial, sans-serif; font-size: clamp(14px, 2vw, 18px); }
+h1, .display-4 { font-size: 2.5rem; font-weight: 700; }
+h2 { font-size: 2rem; font-weight: 600; }
+h3, h4 { font-weight: 500; }
+p, .card-text { font-size: 1.1rem; }
+.section { padding: 3rem 0; }
+.mb-4 { margin-bottom: 1.5rem !important; }
+.btn { border-radius: 0.5rem; font-weight: 500; padding: 0.5em 1.5em; min-height: 44px; transition: background 0.2s, color 0.2s, box-shadow 0.2s; }
+.btn-lg { font-size: 1.2rem; }
+.btn:hover, .nav-link:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.table-striped > tbody > tr:nth-of-type(odd) { background: #f6f8fa; }
 .kamar-card { transition: transform 0.2s, box-shadow 0.2s; }
 .kamar-card:hover { transform: translateY(-8px) scale(1.03); box-shadow: 0 8px 32px rgba(0,0,0,0.15); }
 .badge.bg-success { font-size: 1rem; padding: 0.5em 1em; border-radius: 1em; }
 .gallery-img { cursor: pointer; transition: box-shadow 0.2s; }
 .gallery-img:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
 .sticky-top { top: 0; z-index: 1030; }
-#loadingOverlay { transition: opacity 0.5s; } 
+#loadingOverlay { transition: opacity 0.5s; }
+@media (max-width: 768px) {
+  h1, .display-4 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  .btn, .nav-link { font-size: 1rem; }
+}
+@media print {
+  nav, footer, .btn, .toast, #loadingOverlay { display: none !important; }
+  body { background: #fff; color: #000; }
+} 
