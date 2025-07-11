@@ -1,0 +1,10 @@
+body { scroll-behavior: smooth; }
+.hero-img { height: 60vh; object-fit: cover; filter: brightness(0.7); }
+.hero-overlay { background: rgba(0,0,0,0.4); z-index: 2; }
+.kamar-card { transition: transform 0.2s, box-shadow 0.2s; }
+.kamar-card:hover { transform: translateY(-8px) scale(1.03); box-shadow: 0 8px 32px rgba(0,0,0,0.15); }
+.badge.bg-success { font-size: 1rem; padding: 0.5em 1em; border-radius: 1em; }
+.gallery-img { cursor: pointer; transition: box-shadow 0.2s; }
+.gallery-img:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
+.sticky-top { top: 0; z-index: 1030; }
+#loadingOverlay { transition: opacity 0.5s; } 
